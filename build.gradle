@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Selenium for browser automation
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.27.0'
+
+    // TestNG for managing test cases
+    testImplementation group: 'org.testng', name: 'testng', version: '7.10.2'
+
+    // Apache POI for handling Excel files (e.g., test data)
+    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '5.2.3'
+
+    // Jackson or Gson for handling JSON data
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.2'
+
+    // Log4j for logging
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.20.0'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.20.0'
+
+    // Allure TestNG for reporting
+    testImplementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.23.0'
+
+    // AssertJ for advanced assertions
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.24.2'
+
+}
+
+test {
+    useTestNG()
+}
