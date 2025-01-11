@@ -12,9 +12,10 @@ repositories {
 dependencies {
     // Selenium for browser automation
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.27.0'
-
     // TestNG for managing test cases
     testImplementation group: 'org.testng', name: 'testng', version: '7.10.2'
+    // Faker helps to generate fake/random data
+    implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
 
 }
 
